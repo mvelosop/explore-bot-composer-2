@@ -1,1 +1,1 @@
-ngrok start --all --config=./ngrok.yml
+ngrok start --all --config="$env:USERPROFILE/.ngrok2/ngrok.yml" --config=./ngrok.yml
