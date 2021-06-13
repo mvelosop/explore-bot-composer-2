@@ -1,0 +1,10 @@
+{
+  "ExplorationBot.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "Help": [
+        "RootHelp.en-us"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+-```
+Hi I'm a bot to explore Bot Framework features.
+Type **help** to see the available functions
+```
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- I'm sorry, I don't understand what **${turn.activity.text}** means 😕
+- I'm sorry, I don't know what **${turn.activity.text}** is 😕
+- I regret I don't know what to do with **${turn.activity.text}** 😕
