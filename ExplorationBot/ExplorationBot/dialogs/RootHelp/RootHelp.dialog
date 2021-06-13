@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "TEfgL7",
+    "name": "RootHelp",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "nt2MjO"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "7m64Fa"
+          },
+          "activity": "${SendActivity_7m64Fa()}"
+        }
+      ]
+    }
+  ],
+  "generator": "RootHelp.lg",
+  "recognizer": "RootHelp.lu.qna",
+  "id": "RootHelp"
+}

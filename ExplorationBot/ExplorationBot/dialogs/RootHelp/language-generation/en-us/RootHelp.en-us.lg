@@ -1,0 +1,12 @@
+[import](common.lg)
+
+# SendActivity_7m64Fa()
+[Activity
+    Text = ${SendActivity_7m64Fa_text()}
+]
+
+# SendActivity_7m64Fa_text()
+- ```
+## Help
+Type **help** at any moment to get the context help if available, or this one otherwise.
+```
