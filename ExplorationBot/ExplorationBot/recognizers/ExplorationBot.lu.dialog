@@ -1,8 +1,0 @@
-{
-  "$kind": "Microsoft.MultiLanguageRecognizer",
-  "id": "LUIS_ExplorationBot",
-  "recognizers": {
-    "en-us": "ExplorationBot.en-us.lu",
-    "": "ExplorationBot.en-us.lu"
-  }
-}
