@@ -2,9 +2,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime.Extensions;
+using Microsoft.Bot.Builder.Dialogs.Declarative;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
+using System.Linq;
 
 namespace ExplorationBot
 {
@@ -22,6 +25,16 @@ namespace ExplorationBot
         {
             services.AddControllers().AddNewtonsoftJson();
             services.AddBotRuntime(Configuration);
+
+            var declarativeTypes = services
+                .Where(x => x.ServiceType == typeof(DeclarativeType))
+                .ToList();
+
+            var recognizers = declarativeTypes
+                .Where(x => x.ImplementationFactory.Target.GetType().FullName.Contains("Recognizer"))
+                .ToList();
+
+            Log.Information("----- Registered recognizers: {@Recognizers}", recognizers.Select(x => x.ImplementationFactory.Target.GetType().FullName));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

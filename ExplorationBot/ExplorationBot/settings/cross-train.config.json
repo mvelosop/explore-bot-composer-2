@@ -1,0 +1,20 @@
+{
+  "ExplorationBot.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "Help": [
+        "RootHelp.en-us"
+      ],
+      "Reminder": [
+        "Reminder.en-us"
+      ]
+    }
+  },
+  "Reminder.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "GetReminderList": "",
+      "ReminderHelp": ""
+    }
+  }
+}

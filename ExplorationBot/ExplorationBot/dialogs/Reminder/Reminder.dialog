@@ -1,0 +1,87 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "EgkHh6",
+    "name": "Reminder",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ds4ftx"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "zlDLk8"
+          },
+          "activity": "${SendActivity_zlDLk8()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "L6WR8C"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${TextInput_Prompt_L6WR8C()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Lkfgb4"
+          },
+          "activity": "${SendActivity_Lkfgb4()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "sy3py3",
+        "name": "GetReminderList"
+      },
+      "intent": "GetReminderList",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ns0eYI"
+          },
+          "activity": "${SendActivity_ns0eYI()}"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "6JcKYh",
+        "name": "ReminderHelp"
+      },
+      "intent": "ReminderHelp",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "ZhLBpY"
+          },
+          "activity": "${SendActivity_ZhLBpY()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Reminder.lg",
+  "id": "Reminder",
+  "recognizer": "Reminder.lu.qna"
+}
