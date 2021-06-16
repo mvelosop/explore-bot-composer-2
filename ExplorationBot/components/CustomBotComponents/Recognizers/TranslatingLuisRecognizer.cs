@@ -3,7 +3,6 @@ using Microsoft.Bot.Builder.AI.Luis;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,8 +13,6 @@ namespace CustomBotComponents.Recognizers
     {
         public override Task<RecognizerResult> RecognizeAsync(DialogContext dialogContext, Activity activity, CancellationToken cancellationToken = default, Dictionary<string, string> telemetryProperties = null, Dictionary<string, double> telemetryMetrics = null)
         {
-            throw new InvalidOperationException("Recognizer");
-
             var logger = dialogContext.Services.Get<ILoggerFactory>().CreateLogger<TranslatingLuisRecognizer>();
 
             logger.LogInformation("----- Recognizing (LUIS) '{Text}' [{locale}] ({@Activity})", activity.Text, activity.Locale, activity);
