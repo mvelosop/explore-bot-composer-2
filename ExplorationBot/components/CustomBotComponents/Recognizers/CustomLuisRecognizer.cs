@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace CustomBotComponents.Recognizers
 {
-    public class TranslatingLuisRecognizer : LuisAdaptiveRecognizer
+    public class CustomLuisRecognizer : LuisAdaptiveRecognizer
     {
         public override Task<RecognizerResult> RecognizeAsync(DialogContext dialogContext, Activity activity, CancellationToken cancellationToken = default, Dictionary<string, string> telemetryProperties = null, Dictionary<string, double> telemetryMetrics = null)
         {
-            var logger = dialogContext.Services.Get<ILoggerFactory>().CreateLogger<TranslatingLuisRecognizer>();
+            var logger = dialogContext.Services.Get<ILoggerFactory>().CreateLogger<CustomLuisRecognizer>();
 
             logger.LogInformation("----- Recognizing (LUIS) '{Text}' [{locale}] ({@Activity})", activity.Text, activity.Locale, activity);
 

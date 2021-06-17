@@ -25,7 +25,7 @@ namespace CustomBotComponents.Components
 
             // Declarative types
             services.AddSingleton<DeclarativeType>(
-                sp => new DeclarativeType<TranslatingLuisRecognizer>(LuisAdaptiveRecognizer.Kind));
+                sp => new DeclarativeType<CustomLuisRecognizer>(LuisAdaptiveRecognizer.Kind));
         }
     }
 }
