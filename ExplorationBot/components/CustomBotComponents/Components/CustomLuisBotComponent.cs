@@ -12,7 +12,7 @@ using DynamicList = Microsoft.Bot.Builder.AI.Luis.DynamicList;
 
 namespace CustomBotComponents.Components
 {
-    public class TranslatingLuisBotComponent : BotComponent
+    public class CustomLuisBotComponent : BotComponent
     {
         public override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
