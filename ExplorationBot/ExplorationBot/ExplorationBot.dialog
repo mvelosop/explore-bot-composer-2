@@ -77,6 +77,24 @@
         }
       ],
       "condition": "= #Help.score >= 0.7"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "0ggzRF",
+        "name": "Reminder"
+      },
+      "intent": "Reminder",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "XUNLUl"
+          },
+          "activityProcessed": true,
+          "dialog": "Reminder"
+        }
+      ]
     }
   ],
   "generator": "ExplorationBot.lg",

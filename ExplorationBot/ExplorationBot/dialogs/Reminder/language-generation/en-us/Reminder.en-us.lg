@@ -1,0 +1,32 @@
+[import](common.lg)
+
+# SendActivity_zlDLk8()
+[Activity
+    Text = 🚧 Under construction 🚧
+]
+
+# SendActivity_ns0eYI()
+[Activity
+    Text = ${SendActivity_ns0eYI_text()}
+]
+
+# SendActivity_ns0eYI_text()
+- ```## Reminder List
+🚧 Under construction 🚧```
+# TextInput_Prompt_L6WR8C()
+[Activity
+    Text = ${TextInput_Prompt_L6WR8C_text()}
+]
+
+# TextInput_Prompt_L6WR8C_text()
+- ```What do you want to do about reminders?
+(Try **list** or **help**)```
+# SendActivity_ZhLBpY()
+[Activity
+    Text = ## Reminder Help 🚧 Under construction 🚧
+]
+
+# SendActivity_Lkfgb4()
+[Activity
+    Text = Exiting **Reminder dialog**...
+]

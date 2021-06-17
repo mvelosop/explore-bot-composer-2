@@ -2,9 +2,12 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime.Extensions;
+using Microsoft.Bot.Builder.Dialogs.Declarative;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
+using System.Linq;
 
 namespace ExplorationBot
 {
@@ -22,6 +25,12 @@ namespace ExplorationBot
         {
             services.AddControllers().AddNewtonsoftJson();
             services.AddBotRuntime(Configuration);
+
+            var builtInLuisComponent = services
+                .Where(x => x.ServiceType == typeof(DeclarativeType))
+                .FirstOrDefault(x => x.ImplementationFactory.Target.GetType().FullName.StartsWith("Microsoft.Bot.Builder.AI.Luis.LuisBotComponent"));
+
+            services.Remove(builtInLuisComponent);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

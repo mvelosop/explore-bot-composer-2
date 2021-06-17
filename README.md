@@ -1,1 +1,1 @@
-# exploring-bot-composer-2
+# explore-bot-composer-2
