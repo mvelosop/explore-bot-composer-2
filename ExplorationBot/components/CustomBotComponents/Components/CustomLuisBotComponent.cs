@@ -16,9 +16,6 @@ namespace CustomBotComponents.Components
     {
         public override void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton<IMiddleware, RegisterClassMiddleware<ILoggerFactory>>(
-                sp => new RegisterClassMiddleware<ILoggerFactory>(sp.GetRequiredService<ILoggerFactory>()));
-
             // Converters
             services.AddSingleton<JsonConverterFactory, JsonConverterFactory<ArrayExpressionConverter<DynamicList>>>();
             services.AddSingleton<JsonConverterFactory, JsonConverterFactory<ArrayExpressionConverter<ExternalEntity>>>();
