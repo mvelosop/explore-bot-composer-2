@@ -11,7 +11,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CustomBotComponents" Version="0.4.4-dev" />
+    <PackageReference Include="CustomBotComponents" Version="0.4.6-dev" />
     <PackageReference Include="Destructurama.JsonNet" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.16" />
     <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.13.2" />
